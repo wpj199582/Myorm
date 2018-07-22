@@ -14,13 +14,13 @@ public interface Query {
      * @param params 参数
      * @return 返回执行sql语句后受影响的行数
      */
-  public int executeDML(String sql,Object[] params);
+    int executeDML(String sql, Object[] params);
 
     /**
      * 将一个对象存储到数据库(自动生成sql语句)
      * @param obj
      */
-  public void insert(Object obj);
+    void insert(Object obj);
 
     /**
      * 删除clazz对应的表中的记录(指定主键值ID)
@@ -28,7 +28,7 @@ public interface Query {
      * @param id 主键
      * @return
      */
-  public void delete(Class clazz,int id);
+    void delete(Class clazz, int id);
 
     /**
      * 删除对象在数据库中的记录(类对应到表，对象主键值对应到记录)
@@ -41,7 +41,7 @@ public interface Query {
      * @param params 需要更新的属性列表
      * @return
      */
-  public int update(Object obj,String[] params);
+    int update(Object obj, String[] params);
 
     /**
      * 查询返回多行记录，并将每行记录封装到clazz指定的类中
@@ -50,7 +50,7 @@ public interface Query {
      * @param params 参数
      * @return  查询结果列表
      */
-  public List queryRows(String sql,Class clazz,Object[] params);
+    List queryRows(String sql, Class clazz, Object[] params);
 
     /**
      * 查询返回单行记录，并将每行记录封装到clazz指定的类中
@@ -59,7 +59,7 @@ public interface Query {
      * @param params
      * @return 查询到的单个结果
      */
-  public Object querySingleRows(String sql,Class clazz,Object[] params);
+    Object querySingleRows(String sql, Class clazz, Object[] params);
 
 
     /**
@@ -68,7 +68,7 @@ public interface Query {
      * @param params 参数
      * @return  查询到的单行单列
      */
-  public Object querySingleValue(String sql,Object[] params);
+    Object querySingleValue(String sql, Object[] params);
 
     /**
      * 查询返回一个数字，并将每行记录封装到clazz指定的类中
@@ -76,6 +76,6 @@ public interface Query {
      * @param params 参数
      * @return  查询到的数字
      */
-  public Number queryNumber(String sql,Object[] params);
+    Number queryNumber(String sql, Object[] params);
 
 }
