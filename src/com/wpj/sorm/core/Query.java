@@ -34,7 +34,6 @@ public interface Query {
      * 删除对象在数据库中的记录(类对应到表，对象主键值对应到记录)
      * @param obj
      */
-  public void delete(Object obj);
 
     /**
      * 更新对象对应记录

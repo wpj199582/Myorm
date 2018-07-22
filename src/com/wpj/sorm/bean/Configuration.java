@@ -6,4 +6,5 @@ package com.wpj.sorm.bean;
  * 封装配置文件信息
  */
 public class Configuration {
+
 }
