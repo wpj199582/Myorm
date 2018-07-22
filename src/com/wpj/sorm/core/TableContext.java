@@ -3,12 +3,12 @@ package com.wpj.sorm.core;
 import com.wpj.sorm.bean.ColumnInfo;
 import com.wpj.sorm.bean.TableInfo;
 import com.wpj.sorm.utils.JavaFileUtils;
+import com.wpj.sorm.utils.StringUtils;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -92,7 +92,7 @@ public class TableContext {
         for(TableInfo tableInfo:tables.values()){
             try {
                 Class c = Class.forName(DBManager.getConf().getPoPackage()
-                        +"."+StringUtils.firstChar2UpperCase(tableInfo.getTname()));
+                        +"."+StringUtils.firstChartoUpper(tableInfo.getTableName()));
                 poClassTableMap.put(c, tableInfo);
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
