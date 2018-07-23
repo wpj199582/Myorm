@@ -112,7 +112,7 @@ public class JavaFileUtils {
         BufferedWriter bw = null;
 
         try {
-            bw = new BufferedWriter(new FileWriter(f.getAbsoluteFile()+"/"+StringUtils.firstChar2UpperCase(tableInfo.getTname())+".java"));
+            bw = new BufferedWriter(new FileWriter(f.getAbsoluteFile()+"/"+StringUtils.firstChartoUpper(tableInfo.getTableName())+".java"));
             bw.write(src);
             System.out.println("建立表"+tableInfo.getTname()+
                     "对应的java类："+StringUtils.firstChar2UpperCase(tableInfo.getTname())+".java");
